@@ -10,6 +10,8 @@ import PricingSection from "../components/PricingSection";
 import FAQSection from "../components/FAQSection";
 import CTASection from "../components/CTASection";
 import Footer from "../components/Footer";
+import { ContainerScroll } from "../components/ui/container-scroll-animation";
+import teamworkIllustration from "../assets/teamwork-illustration.svg";
 
 const Index = () => {
   useEffect(() => {
@@ -43,6 +45,29 @@ const Index = () => {
       <OfferBanner />
       <Navbar />
       <HeroSection />
+      <div className="bg-gray-50/50 py-16">
+        <ContainerScroll
+          titleComponent={
+            <>
+              <div className="space-y-4">
+                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center">
+                  Our <span className="text-brand-600">Recruitment</span> Technology
+                </h2>
+                <p className="text-lg md:text-xl text-gray-600 max-w-xl mx-auto text-center">
+                  Discover how our AI-powered platform revolutionizes the hiring process
+                </p>
+              </div>
+            </>
+          }
+        >
+          <img
+            src={teamworkIllustration}
+            alt="TalentMatch Teamwork Platform"
+            className="mx-auto rounded-2xl object-cover h-full object-center"
+            draggable={false}
+          />
+        </ContainerScroll>
+      </div>
       <FeaturesSection />
       <BenefitsSection />
       <TestimonialsSection />
