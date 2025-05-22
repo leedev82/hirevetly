@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Users, Clock } from "lucide-react";
 import { ContainerScroll } from "@/components/ui/container-scroll-animation";
