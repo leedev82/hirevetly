@@ -1,0 +1,91 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#60A5FA" stop-opacity="0.3" />
+    </linearGradient>
+    <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6" stop-opacity="1" />
+      <stop offset="100%" stop-color="#2563EB" stop-opacity="1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background shape -->
+  <rect x="100" y="50" width="600" height="500" rx="20" fill="url(#gradient1)" />
+
+  <!-- Dashboard frame -->
+  <rect x="150" y="100" width="500" height="400" rx="10" fill="white" stroke="#E5E7EB" stroke-width="2" />
+
+  <!-- Header bar -->
+  <rect x="150" y="100" width="500" height="50" rx="10" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="2" />
+  
+  <!-- Search bar -->
+  <rect x="170" y="115" width="200" height="20" rx="5" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1" />
+  <circle cx="180" cy="125" r="4" fill="#3B82F6" />
+
+  <!-- Navigation icons -->
+  <circle cx="600" cy="125" r="6" fill="#3B82F6" />
+  <circle cx="620" cy="125" r="6" fill="#E5E7EB" />
+  <circle cx="640" cy="125" r="6" fill="#E5E7EB" />
+
+  <!-- Main content area -->
+  <!-- Left sidebar -->
+  <rect x="150" y="150" width="120" height="350" fill="#F9FAFB" />
+  
+  <!-- Menu items -->
+  <rect x="165" y="180" width="90" height="10" rx="2" fill="#3B82F6" />
+  <rect x="165" y="210" width="90" height="10" rx="2" fill="#D1D5DB" />
+  <rect x="165" y="240" width="90" height="10" rx="2" fill="#D1D5DB" />
+  <rect x="165" y="270" width="90" height="10" rx="2" fill="#D1D5DB" />
+  <rect x="165" y="300" width="90" height="10" rx="2" fill="#D1D5DB" />
+
+  <!-- Content area -->
+  <!-- Card 1: Metrics -->
+  <rect x="290" y="170" width="340" height="80" rx="5" fill="white" stroke="#E5E7EB" stroke-width="1" />
+  <rect x="310" y="185" width="60" height="15" rx="2" fill="#EFF6FF" />
+  <rect x="310" y="210" width="100" height="25" rx="2" fill="#BFDBFE" />
+  
+  <rect x="430" y="185" width="60" height="15" rx="2" fill="#EFF6FF" />
+  <rect x="430" y="210" width="100" height="25" rx="2" fill="#BFDBFE" />
+  
+  <rect x="550" y="185" width="60" height="15" rx="2" fill="#EFF6FF" />
+  <rect x="550" y="210" width="60" height="25" rx="2" fill="#BFDBFE" />
+
+  <!-- Card 2: Chart -->
+  <rect x="290" y="270" width="340" height="170" rx="5" fill="white" stroke="#E5E7EB" stroke-width="1" />
+  <rect x="310" y="290" width="100" height="15" rx="2" fill="#111827" />
+  
+  <!-- Simplified chart -->
+  <polyline points="310,380 340,360 370,370 400,330 430,350 460,310 490,340 520,320 550,330 580,290" 
+           stroke="url(#gradient2)" stroke-width="3" fill="none" />
+  <circle cx="310" cy="380" r="4" fill="#3B82F6" />
+  <circle cx="340" cy="360" r="4" fill="#3B82F6" />
+  <circle cx="370" cy="370" r="4" fill="#3B82F6" />
+  <circle cx="400" cy="330" r="4" fill="#3B82F6" />
+  <circle cx="430" cy="350" r="4" fill="#3B82F6" />
+  <circle cx="460" cy="310" r="4" fill="#3B82F6" />
+  <circle cx="490" cy="340" r="4" fill="#3B82F6" />
+  <circle cx="520" cy="320" r="4" fill="#3B82F6" />
+  <circle cx="550" cy="330" r="4" fill="#3B82F6" />
+  <circle cx="580" cy="290" r="4" fill="#3B82F6" />
+  
+  <line x1="310" y1="380" x2="310" y2="320" stroke="#E5E7EB" stroke-width="1" />
+  <line x1="310" y1="380" x2="580" y2="380" stroke="#E5E7EB" stroke-width="1" />
+
+  <!-- Recruiter & Candidate icons -->
+  <circle cx="420" cy="460" r="25" fill="#EFF6FF" />
+  <circle cx="420" cy="445" r="8" fill="#3B82F6" />
+  <rect x="405" y="458" width="30" height="15" rx="5" fill="#3B82F6" />
+  
+  <circle cx="480" cy="460" r="25" fill="#EFF6FF" />
+  <circle cx="480" cy="445" r="8" fill="#60A5FA" />
+  <rect x="465" y="458" width="30" height="15" rx="5" fill="#60A5FA" />
+  
+  <!-- Connection line between icons -->
+  <line x1="445" y1="460" x2="455" y2="460" stroke="#3B82F6" stroke-width="2" stroke-dasharray="3,2" />
+
+  <!-- AI matching indicator -->
+  <circle cx="450" cy="460" r="10" fill="#BFDBFE" />
+  <text x="450" y="464" font-size="12" text-anchor="middle" fill="#1E40AF" font-weight="bold">AI</text>
+</svg>
