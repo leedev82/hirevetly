@@ -5,18 +5,18 @@ const FeaturesSection = () => {
   const features = [
     {
       icon: <Circle className="h-8 w-8 text-brand-500" />,
-      title: "AI Matching Technology",
-      description: "Our proprietary algorithm identifies candidates with the perfect skill match for your open roles.",
+      title: "Unlock AI Matching Technology",
+      description: "Our proprietary algorithm guarantees candidates with the perfect skill match for your open roles in record time.",
     },
     {
       icon: <Square className="h-8 w-8 text-brand-500" />,
-      title: "Skill-Matrix Ratings",
-      description: "Every candidate is pre-rated on both technical and soft skills relevant to your industry.",
+      title: "Dominate with Skill-Matrix Ratings",
+      description: "Every candidate is instantly pre-rated on both technical and soft skills relevant to your industry.",
     },
     {
       icon: <Triangle className="h-8 w-8 text-brand-500" />,
-      title: "Hybrid Interview Booths",
-      description: "Virtual or in-person interview scheduling that syncs with your calendar automatically.",
+      title: "Instant Hybrid Interview Booths",
+      description: "Virtual or in-person interview scheduling that syncs with your calendar automatically, filling roles 3× faster.",
     },
   ];
 
@@ -25,10 +25,10 @@ const FeaturesSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Why Recruiters Choose TalentMatch
+            Why <span className="text-brand-600">1,000+ Recruiters</span> Choose TalentMatch
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Stop wasting time on unqualified candidates. Our platform helps you find the right fit quickly and efficiently.
+            Stop wasting time on unqualified candidates. Our platform guarantees you'll find the right fit quickly and efficiently.
           </p>
         </div>
 
