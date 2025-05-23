@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, Quote } from "lucide-react";
 
 const testimonials = [
   {
@@ -46,7 +46,7 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section id="testimonials" className="py-20">
+    <section id="testimonials" className="py-24 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -57,35 +57,42 @@ const TestimonialsSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-3 md:grid-cols-6 gap-8 items-center mb-16">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8 items-center mb-16 max-w-4xl mx-auto">
           {clientLogos.map((client, index) => (
             <div key={index} className="flex justify-center">
-              <img 
-                src={client.logo} 
-                alt={client.name} 
-                className="h-8 opacity-70 hover:opacity-100 transition-opacity" 
-              />
+              <div className="bg-white p-4 rounded-lg shadow-sm h-16 w-full flex items-center justify-center">
+                <img 
+                  src={client.logo} 
+                  alt={`${client.name} logo`} 
+                  className="h-8 opacity-80 hover:opacity-100 transition-opacity" 
+                />
+              </div>
             </div>
           ))}
         </div>
 
         <div className="max-w-4xl mx-auto relative">
-          <Card className="border-0 shadow-lg">
-            <CardContent className="p-8 md:p-10">
+          <Card className="border-0 shadow-xl overflow-hidden">
+            <div className="absolute top-6 left-6">
+              <Quote className="h-12 w-12 text-brand-200 opacity-50" />
+            </div>
+            
+            <CardContent className="p-12 md:p-16">
               <div className="flex flex-col items-center text-center">
-                <blockquote className="text-xl md:text-2xl text-gray-700 italic mb-6">
+                <blockquote className="text-xl md:text-2xl text-gray-700 italic mb-10 relative z-10">
                   "{testimonials[activeIndex].quote}"
                 </blockquote>
-                <div className="flex items-center">
-                  <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
+                
+                <div className="flex flex-col sm:flex-row items-center">
+                  <div className="w-16 h-16 rounded-full overflow-hidden mr-4 shadow-md border-2 border-white">
                     <img 
                       src={testimonials[activeIndex].avatar} 
                       alt={testimonials[activeIndex].name} 
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="text-left">
-                    <p className="font-bold">{testimonials[activeIndex].name}</p>
+                  <div className="text-center sm:text-left mt-4 sm:mt-0">
+                    <p className="font-bold text-lg">{testimonials[activeIndex].name}</p>
                     <p className="text-sm text-gray-600">{testimonials[activeIndex].title}</p>
                   </div>
                 </div>
@@ -93,33 +100,39 @@ const TestimonialsSection = () => {
             </CardContent>
           </Card>
 
-          <div className="flex justify-center mt-6 space-x-2">
+          <div className="flex justify-center mt-8 space-x-3">
             <Button 
               variant="outline" 
               size="icon" 
               onClick={prevTestimonial}
-              className="rounded-full"
+              className="rounded-full shadow-sm hover:bg-brand-50"
             >
               <ArrowLeft className="h-4 w-4" />
+              <span className="sr-only">Previous</span>
             </Button>
+            
             {testimonials.map((_, index) => (
               <Button 
                 key={index} 
                 variant="ghost" 
                 size="sm" 
-                className={`w-2.5 h-2.5 rounded-full p-0 ${
+                className={`w-3 h-3 p-0 rounded-full ${
                   index === activeIndex ? 'bg-brand-500' : 'bg-gray-300'
                 }`}
                 onClick={() => setActiveIndex(index)}
-              />
+              >
+                <span className="sr-only">Testimonial {index + 1}</span>
+              </Button>
             ))}
+            
             <Button 
               variant="outline" 
               size="icon" 
               onClick={nextTestimonial}
-              className="rounded-full"
+              className="rounded-full shadow-sm hover:bg-brand-50"
             >
               <ArrowRight className="h-4 w-4" />
+              <span className="sr-only">Next</span>
             </Button>
           </div>
         </div>

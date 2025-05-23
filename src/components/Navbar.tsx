@@ -35,8 +35,8 @@ const Navbar = () => {
         </div>
         
         <div className="flex items-center space-x-4">
-          <Button variant="outline" size="sm" className="hidden sm:inline-flex">Log In</Button>
-          <Button size="sm" className="bg-brand-500 hover:bg-brand-600 text-white">Get Started</Button>
+          <Button variant="ghost" size="sm" className="hidden sm:inline-flex text-gray-700 hover:text-brand-600 hover:bg-gray-100">Log In</Button>
+          <Button size="sm" className="bg-brand-500 hover:bg-brand-600 text-white shadow-sm">Get Started</Button>
         </div>
       </div>
     </nav>
