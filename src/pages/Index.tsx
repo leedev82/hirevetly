@@ -11,7 +11,7 @@ import FAQSection from "../components/FAQSection";
 import CTASection from "../components/CTASection";
 import Footer from "../components/Footer";
 import { ContainerScroll } from "../components/ui/container-scroll-animation";
-import teamworkIllustration from "../assets/teamwork-illustration.svg";
+import resumeai from "../assets/resumeai.png";
 
 const Index = () => {
   useEffect(() => {
@@ -42,7 +42,7 @@ const Index = () => {
 
   return (
     <div className="flex flex-col">
-      <OfferBanner />
+      {/* <OfferBanner /> */}
       <Navbar />
       <HeroSection />
       <div className="bg-gray-50/50 py-16">
@@ -61,7 +61,7 @@ const Index = () => {
           }
         >
           <img
-            src={teamworkIllustration}
+            src={resumeai}
             alt="TalentMatch Teamwork Platform"
             className="mx-auto rounded-2xl object-cover h-full object-center"
             draggable={false}
