@@ -58,7 +58,7 @@ const Index = () => {
                 </p>
               </div>
             </>
-          }
+          }//hi
         >
           <img
             src={resumeai}
